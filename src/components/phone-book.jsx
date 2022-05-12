@@ -32,7 +32,7 @@ export class PhoneBook extends Component{
         arr.push(objContact);
         this.setState({contacts:arr})
     }
-    filterArr() {
+    filterArr = ()=> {
         return this.state.contacts.filter(contact=>contact.name.toLocaleLowerCase().includes(this.state.filter.toLocaleLowerCase()))
     }
     deleteContact = (id) => {
